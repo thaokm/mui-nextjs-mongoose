@@ -7,14 +7,14 @@ import {Container} from '@mui/material'
 
 export default function Home() {
   return (
-    <Container>
+    <>
       <Head>
-        <title>Next with MUI</title>
+        <title>Next with MSO Exam</title>
         <meta name="by Thaokm" content="Exam" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Exams />
-    </Container>
+    </>
   )
 }
