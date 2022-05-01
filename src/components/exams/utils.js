@@ -1,14 +1,17 @@
-import { EmpInfo, PassScore, TestBank, TestTime, jsonTestBank, TestTitle, AnNinhBank, HRBank, EHSBank, IEBank } from "./testbank"
-
+// ■---- exams\utils.js
 // lưu dữ liệu bài thi hiện tại, mặc định chưa chọn câu nào
-export const resultData = EHSBank.map((quest) => {
-    return {
-        id: quest.id,
-        select: 0,
-        score: 0
-    }
+export const resultData = []
+export function initResultData(bank) {
+    bank.map((quest, index) => {
+        let resultItem = {
+            id: quest.id,
+            select: 0,
+            score: 0
+        }
+        resultData[index] = resultItem
+        return resultItem
 })
-
+}
 export const secTohhmmss = (sec) => {
     let hh = Math.floor(sec / 3600)
     let mm = Math.floor((sec - (hh * 3600)) / 60)
@@ -37,6 +40,7 @@ export function examScoring(data) {
         correct: correctTotal,
     }
 }
+
 export function submitExam(globalState, setGlobalState, timeup) {
     let finalScore = examScoring(resultData)
     let confimation
@@ -44,8 +48,7 @@ export function submitExam(globalState, setGlobalState, timeup) {
         confimation = confirm(`Đã làm: ${finalScore.select}/${finalScore.total} câu\nBạn có muốn nộp bài?`)
     }
     if (confimation || timeup) {
-        alert(`Đã làm: ${finalScore.select}/${finalScore.total} câu\nĐúng ${finalScore.correct}/${finalScore.total} câu\nTổng điểm: ${finalScore.score}`)
+        alert(`Đã làm: ${finalScore.select}/${finalScore.total} câu\nĐúng ${finalScore.correct}/${finalScore.select} câu\nTổng điểm: ${finalScore.score}`)
         setGlobalState((globalState) => ({...globalState, showResult: true}))
-        console.log(resultData)
     }
 }

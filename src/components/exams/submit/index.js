@@ -1,3 +1,4 @@
+// ■---- exams\submit\index.js
 import { useContext } from "react"
 import { ExamContext } from "../examContextProvider"
 import { Button } from "@mui/material"
@@ -10,7 +11,7 @@ export default function SubmitBtn() {
         submitExam(globalState, setGlobalState, false)
     }
     return(
-        <Button color="info" disabled={globalState.showResult} variant="contained" size="lg" onClick={handleSubmit}>
+        <Button color="info" disabled={globalState.showResult} variant="contained" disableElevation size="lg" onClick={handleSubmit}>
             Nộp bài
         </Button>
     )

@@ -1,9 +1,9 @@
+// ■---- exams\timer\index.js
 import { Card, Stack, Typography } from "@mui/material"
 import { useState, useEffect, useContext } from "react";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm"
 import { ExamContext } from "../examContextProvider"
-import { submitExam } from "../submit"
-import { secTohhmmss } from "../utils"
+import { secTohhmmss, submitExam } from "../utils"
 
 export default function Timer({time, alertTime}) {
     const [seconds, setSeconds] = useState(time)
@@ -32,8 +32,8 @@ export default function Timer({time, alertTime}) {
                 bottom:"30px",
                 right:"30px",
                 padding:"10px",
-                opacity:0.8,
-                background: alertTime?seconds<alertTime?"#ea4435":"#33a853":seconds<30?"#ea4435":"#33a853"
+                opacity:0.9,
+                background: alertTime?seconds<alertTime?"#ea4435":"#33a853":seconds<30?"#ea4435":"#33a853",
             }}
         >
             <Stack 

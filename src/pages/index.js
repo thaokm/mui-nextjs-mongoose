@@ -1,20 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import NavBar from '../components/layout/navbar'
-import { ButtonEx } from '../mui_samples'
-import Exams from '../components/exams'
-import {Container} from '@mui/material'
+// ■---- pages/index.js
+import Home from "../components/home"
 
-export default function Home() {
+export default function Root() {
   return (
-    <>
-      <Head>
-        <title>Next with MSO Exam</title>
-        <meta name="by Thaokm" content="Exam" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Exams />
-    </>
+    <Home pageName="HOME PAGE" />
   )
 }

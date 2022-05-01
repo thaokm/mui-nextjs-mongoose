@@ -1,1 +1,1 @@
-run="cd src && npm run dev"
+run="cd src && npm run start"

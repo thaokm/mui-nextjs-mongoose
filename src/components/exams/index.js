@@ -1,67 +1,96 @@
-import { AppBar, Stack, Typography, Toolbar, IconButton, Box } from "@mui/material"
-import { EmpInfo, PassScore, TestBank, TestTime, jsonTestBank, TestTitle, AnNinhBank, HRBank, EHSBank, IEBank } from "./testbank"
-import ExamContextProvider, { ExamContext }  from './examContextProvider'
-import MenuIcon from "@mui/icons-material/Menu"
+// ■---- exams\index.js
+import { Stack, Typography, Box, Autocomplete, TextField } from "@mui/material"
+import { testBankList } from "./testbank"
+import ExamContextProvider  from './examContextProvider'
 import QuestionTemp from "./questionTemp"
 import Timer from "./timer"
+import CustomAppBar from "../customAppBar"
 import SubmitBtn from "./submit"
 import ResultNotice from "./resultNotice"
-import '@fontsource/roboto/300.css'
-import '@fontsource/roboto/400.css'
-import '@fontsource/roboto/500.css'
-import '@fontsource/roboto/700.css'
+import CustomHead from "../customHead"
+import { useEffect, useState } from "react"
+import { initResultData, resultData } from "./utils";
 
-export default function Exams() {
+let testList
+export default function Exams({pageName="Examination System", userName, userId}) {
+    let initBank = {
+        testTitle: '',
+        testTime: 90,
+        passScore: 0,
+        testData: []
+    } // Đối tượng gồm testData, testTitle, passScore, testTime
+    const [bank, setBank] = useState(initBank)
+    const [testData, setTestData] = useState([])
+    //render các giá trị khởi tạo cho bài thi gồm Đề thi (testData) và kết quả thi (resultData)
+    useEffect(() => {
+        testList = [...testBankList]
+        initResultData(bank.testData)
+        setTestData([...bank.testData])
+    }, [bank.testTitle])
+    // lựa chọn bài thi từ ngân hàng thi, render lại trang khi nhận được option
+    const comboBoxChange = (option) => {
+        setBank(testList[option.id])
+    }
     return (
         <ExamContextProvider>
-            <Stack direction="column" justifyContent="center" alignItems="center">
-                <AppBar position="sticky" elevation={1}>
-                    <Toolbar>
-                        <IconButton
-                            size='medium'
-                            edge='start'
-                            color='inherit'
-                            aria-label="menu"
-                            sx={{mr:2}}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" sx={{flexGrow:1}}>
-                            MSO Examining
+            {(userName!=null && userId!=null)?
+            (testData.length==0)?
+            <>
+                <CustomHead title={pageName} />
+                <CustomAppBar pageName={pageName} />
+                <Stack direction="column" justifyContent="center" alignItems="center">
+                    <Stack direction="row" justifyContent="center" sx={{margin:"15px 0px 15px 0px"}}>
+                        <Typography color="info" sx={{fontWeight:"bold", textAlign:"center", fontSize:"26px", color:"#4285f4"}}>
+                            Lựa chọn Bài thi
                         </Typography>
-                        <SubmitBtn />
-                    </Toolbar>
-                </AppBar>
-                <Stack direction="row" justifyContent="center" sx={{margin:"15px 0px 15px 0px"}}>
-                    <Typography color="info" sx={{fontWeight:"bold", textAlign:"center", fontSize:"36px"}}>
-                        Bài thi: {TestTitle.toUpperCase()}
+                    </Stack>
+                    <Autocomplete
+                     id='bank-select'
+                     options={testList.map((test, index) => ({label:test.testTitle, id:index}))}
+                     getOptionLabel={option => option.label}
+                     isOptionEqualToValue={(option, value) => option.id === value.id}
+                     renderInput={(param) => <TextField {...param} label="Chọn bài thi..."/>}
+                     sx={{minWidth:"300px"}}
+                     onChange={(e, option) => {comboBoxChange(option)}}
+                    />
+                </Stack>
+            </>:
+            <>
+                <CustomHead title={pageName} />
+                <CustomAppBar pageName={pageName} button={<SubmitBtn />} />
+                <Stack direction="column" justifyContent="center" alignItems="center">
+                    <Stack direction="row" justifyContent="center" sx={{margin:"15px 0px 15px 0px"}}>
+                        <Typography color="info" sx={{fontWeight:"bold", textAlign:"center", fontSize:"26px", color:"#4285f4"}}>
+                            BÀI THI: {bank.testTitle.toUpperCase()}
+                        </Typography>
+                    </Stack>
+                    <Timer time={bank.testTime} alertTime={Math.floor(bank.testTime/10)} />
+                    <ResultNotice name={userName} gen={userId} passScore={bank.passScore} />
+                    <Box justifyContent="center" alignItems="center" sx={{maxWidth:"750px"}}>
+                        {testData.map((quest, no) => {
+                            return(
+                                <QuestionTemp
+                                    key={quest.id}
+                                    img={quest.img}
+                                    id={quest.id}
+                                    no={no + 1}
+                                    q={quest.q}
+                                    a={quest.a}
+                                    b={quest.b}
+                                    c={quest.c}
+                                    d={quest.d}
+                                    score={quest.score}
+                                    answer={quest.answer}
+                                />    
+                            )
+                        })}
+                    </Box>
+                    <Typography variant="overline" align="center">
+                        copyright © 2022 ThaoKM
                     </Typography>
                 </Stack>
-                <Timer time={TestTime} alertTime={Math.floor(TestTime/10)}/>
-                <ResultNotice name={EmpInfo.name} gen={EmpInfo.gen} passScore={PassScore} />
-                <Box justifyContent="center" alignItems="center" sx={{maxWidth:"750px"}}>
-                    {EHSBank.map((quest, no) => {
-                        return(
-                            <QuestionTemp
-                                key={quest.id}
-                                img={quest.img}
-                                id={quest.id}
-                                no={no + 1}
-                                q={quest.q}
-                                a={quest.a}
-                                b={quest.b}
-                                c={quest.c}
-                                d={quest.d}
-                                score={quest.score}
-                                answer={quest.answer}
-                            />    
-                        )
-                    })}
-                </Box>
-                <Typography variant="overline" align="center">
-                    copyright © 2022 ThaoKM
-                </Typography>
-            </Stack>
+            </>:              
+            "Loading..."}
         </ExamContextProvider>
     )
 }

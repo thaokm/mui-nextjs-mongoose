@@ -1,3 +1,228 @@
+// ■---- exams\testbank.js
+export const AnNinhBank = [
+    {
+        "id": "anninh1",
+        "q": "Kiểm tra an ninh người ra vào khu bảo mật như thế nào?",
+        "img": "/res/tech1.jpeg",
+        "a": "Chỉ kiểm tra an ninh khi vào",
+        "b": "Chỉ kiểm tra an ninh khi ra",
+        "c": "Kiểm tra an ninh cả vào lẫn ra",
+        "d": "Không kiểm tra an ninh",
+        "score": "1",
+        "answer": "3"
+    },
+    {
+        "id": "anninh2",
+        "q": "Quy định về trang phục khi vào công ty là gì?",
+        "img": "",
+        "a": "Mặc quần áo đồng phục khi vào xưởng sản xuất",
+        "b": "Không sử dụng các trang phục phản cảm, nhiều kim loại, quần bò, quần ngố, áo ba lỗ, dép lê",
+        "c": "Không mang ô dù, đeo khẩu trang, mũ khi đi qua khu vực kiểm tra an ninh",
+        "d": "Cả 3 đáp án trên đều đúng",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "anninh3",
+        "q": "Nhân viên để quên tài sản cá nhân khi qua khu vực kiểm tra an ninh, thủ tục để nhân viên nhận lại tài sản của mình là gì?",
+        "img": "/res/tech1.jpeg",
+        "a": "Đến văn phòng bảo vệ cổng G2",
+        "b": "Chứng minh quyền sở hữu",
+        "c": "Ký xác nhận đã nhận lại tài sản",
+        "d": "Cả 3 đáp án trên đều đúng",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "anninh4",
+        "q": "Thời gian mượn thẻ tạm tối đa là bao lâu?",
+        "img": "",
+        "a": "Tối đa 01 ngày kể từ khi mượn thẻ",
+        "b": "Tối đa 01 tuần kể từ khi mượn thẻ",
+        "c": "Trả ngay khi kết thúc ca làm việc, tối đa 15h",
+        "d": "Không giới hạn",
+        "score": "1",
+        "answer": "3"
+    },
+    {
+        "id": "anninh5",
+        "q": "Trong trường hợp phát hiện nhân viên vi phạm chính sách an ninh, trách nhiệm và quyền hạn của bộ phận An ninh là gì?",
+        "img": "",
+        "a": "Điều tra, xử lý vụ việc",
+        "b": "Đề xuất khen thưởng & kỷ luật cá nhân liên quan",
+        "c": "Phối hợp với bên thứ 3 (vendor, đối tác, công an…)",
+        "d": "Cả 3 đáp án trên đều đúng",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "anninh6",
+        "q": "Quy định nào sau đây là SAI khi nói về việc kiểm tra an ninh đối với người?",
+        "img": "",
+        "a": "Khi cửa từ có tín hiệu, kiểm tra lại đủ 10 bước bằng tay dò",
+        "b": "Cửa từ có tín hiệu ở đâu thì kiểm tra lại bằng tay dò ở đó",
+        "c": "Chỉ số kỹ thuật của cửa bầu và các cửa khác là như nhau",
+        "d": "Các thiết bị hỗ trợ kiểm tra an ninh đối với người là cửa từ và tay dò",
+        "score": "1",
+        "answer": "2"
+    },
+    {
+        "id": "anninh7",
+        "q": "Nội dung nào dưới đây là đúng khi nói về SMM?",
+        "img": "",
+        "a": "Bắt buộc cài SMM với điện thoại dùng trong xưởng",
+        "b": "SMM quản lý chức năng camera của điện thoại",
+        "c": "Cài SMM thì không phải dán tem camera khi vào khu vực bảo mật",
+        "d": "A và B đúng",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "anninh8",
+        "q": "Các thiết bị an ninh nào sau đây được sử dụng để hỗ trợ kiểm tra an ninh đối với người?",
+        "img": "",
+        "a": "Tay dò",
+        "b": "Cửa từ",
+        "c": "Xray",
+        "d": "Cả A và B đều đúng",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "anninh9",
+        "q": "Nhân viên được công ty cấp điện thoại để hỗ trợ công việc, nếu làm mất, nhân viên sẽ phải bồi thường?",
+        "img": "",
+        "a": "50% giá trị điện thoại bị mất",
+        "b": "75% giá trị điện thoại bị mất",
+        "c": "100% giá trị điện thoại bị mất",
+        "d": "75% - 100% giá trị điện thoại bị mất",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "anninh10",
+        "q": "Nhân viên mượn thẻ, cho người khác mượn thẻ hoặc chấm công hộ, có thể bị xử lý kỷ luật?",
+        "img": "",
+        "a": "Nhắc nhở",
+        "b": "Cảnh cáo văn bản",
+        "c": "Cảnh cáo văn bản ~ Khiển trách",
+        "d": "Cảnh cáo văn bản ~ Sa thải",
+        "score": "1",
+        "answer": "4"
+    }
+]
+export const HRBank = [
+    {
+        "id": "hr1",
+        "q": "Hiện tại, giữa Công ty và nhân viên ký kết mấy loại hợp đồng có kỳ hạn?",
+        "img": "",
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "score": "1",
+        "answer": "2"
+    },
+    {
+        "id": "hr2",
+        "q": "Sau khi hoàn thành hợp đồng có kỳ hạn 2 năm, nhân viên sẽ được ký hợp đồng có thời hạn bao lâu?",
+        "img": "",
+        "a": "2 năm",
+        "b": "3 năm",
+        "c": "Không xác định thời hạn",
+        "d": "Không ký tiếp hợp đồng",
+        "score": "1",
+        "answer": "2"
+    },
+    {
+        "id": "hr3",
+        "q": "Mức hưởng Bảo hiểm Thất nghiệp (BHTN) theo quy định là bao nhiêu?",
+        "img": "",
+        "a": "Bằng 60% mức lương bình quân đóng BHTN của 6 tháng liền kề trước khi thất nghiệp",
+        "b": "Bằng 60% mức lương bình quân đóng BHXH của 6 tháng liền kề trước khi thất nghiệp",
+        "c": "Bằng 80% mức thu nhập bình quân đóng BHTN của 6 tháng liền kề trước khi thất nghiệp",
+        "d": "Bằng 80% mức thu nhập bình quân đóng BHXH của 6 tháng liền kề trước khi thất nghiệp",
+        "score": "1",
+        "answer": "1"
+    },
+    {
+        "id": "hr4",
+        "q": "Nhân viên sản xuất và kỹ thuật viên mới có thời gian đào tạo nghề là bao lâu?",
+        "img": "",
+        "a": "7 ngày",
+        "b": "24 ngày",
+        "c": "30 ngày",
+        "d": "45 ngày",
+        "score": "1",
+        "answer": "3"
+    },
+    {
+        "id": "hr5",
+        "q": "Thời gian bắt đầu và kết thúc ca làm việc (Ca ngày) của chế độ làm việc 2 ca 2 kíp là?",
+        "img": "",
+        "a": "07:30 ~ 16:48",
+        "b": "08:00 ~ 17:48",
+        "c": "08:00 ~ 17:00",
+        "d": "08:00 ~ 20:00",
+        "score": "1",
+        "answer": "2"
+    },
+    {
+        "id": "hr6",
+        "q": "Thời gian bắt đầu và kết thúc ca làm việc (Ca ngày) của chế độ làm việc 2 ca 3 kíp (bao gồm thời gian làm thêm) là?",
+        "img": "",
+        "a": "06:00 ~ 14:00",
+        "b": "08:00 ~ 16:00",
+        "c": "08:00 ~ 17:00",
+        "d": "08:00 ~ 20:00",
+        "score": "1",
+        "answer": "4"
+    },
+    {
+        "id": "hr7",
+        "q": "Tổng thời gian làm việc theo quy định của Công ty trong một tuần của chế độ làm việc 2 ca 2 kíp, hành chính là",
+        "img": "",
+        "a": "40 giờ",
+        "b": "44 giờ",
+        "c": "48 giờ",
+        "d": "56 giờ",
+        "score": "1",
+        "answer": "2"
+    },
+    {
+        "id": "hr8",
+        "q": "Nhân viên sản xuất trực tiếp được nghỉ giải lao nhiêu phút trong một ngày làm việc?",
+        "img": "",
+        "a": "10 phút",
+        "b": "15 phút",
+        "c": "20 phút",
+        "d": "30 phút",
+        "score": "1",
+        "answer": "3"
+    },
+    {
+        "id": "hr9",
+        "q": "Nhân viên sản xuất trực tiếp được nghỉ đi ăn giữa ca trong khoảng thời gian bao lâu?",
+        "img": "",
+        "a": "40 phút",
+        "b": "50 phút",
+        "c": "60 phút",
+        "d": "120 phút",
+        "score": "1",
+        "answer": "3"
+    },
+    {
+        "id": "hr10",
+        "q": "Với nhóm 2 ca 2 kíp, nhân viên làm ca ngày đến mấy giờ thì được tính thời gian ăn bữa phụ vào thời gian làm việc?",
+        "img": "",
+        "a": "18:18",
+        "b": "18:48",
+        "c": "19:00",
+        "d": "18:30",
+        "score": "1",
+        "answer": "3"
+    }
+]
 export const EHSBank = [
     {
         "id": "ehs1",
@@ -13,7 +238,7 @@ export const EHSBank = [
     {
         "id": "ehs2",
         "q": "Bộ phận chịu trách nhiệm kiểm soát thành phần hóa chất tại công ty?",
-        "img": "/res/tech1.jpeg",
+        "img": "",
         "a": "Bộ phận EHS",
         "b": "Bộ phận HR",
         "c": "Bộ phận sử dụng",
@@ -57,7 +282,7 @@ export const EHSBank = [
     {
         "id": "ehs6",
         "q": "Số điện thoại liên lạc khẩn cấp đến bộ phận phòng cháy chữa cháy trong SEV?",
-        "img": "/res/tech2.jpeg",
+        "img": "/res/pccc.jpeg",
         "a": "6113",
         "b": "6114",
         "c": "6115",
@@ -108,232 +333,143 @@ export const EHSBank = [
         "d": "Nguyên nhân khác",
         "score": "1",
         "answer": "1"
+    }
+]
+export const IEBank = [
+   {
+        "id": "ie1",
+        "q": "Triết lý và tư tưởng SPS là viết tắt của cụm từ gì?",
+        "img": "",
+        "a": "Samsung Production System (Hệ thống sản xuất Samsung)",
+        "b": "Samsung Protection System (Hệ thống phòng vệ Samsung)",
+        "c": "Samsung Production Solution (Giải pháp sản xuất Samsung)",
+        "d": "Samsung Protection Solution (Giải pháp phòng vệ Samsung)",
+        "score": "1",
+        "answer": "1"
     },
     {
-        "id": "ehs11",
-        "q": "Tần suất quan trắc môi trường theo pháp luật quy định là bao lâu?",
+        "id": "ie2",
+        "q": "Điều nào sau đây không nằm trong các Giá trị trọng tâm của Samsung?",
         "img": "",
-        "a": "1 tháng/lần",
-        "b": "6 tháng/lần",
-        "c": "3 tháng/lần",
-        "d": "1 năm/lần",
+        "a": "Con người",
+        "b": "Thay đổi",
+        "c": "Môi trường",
+        "d": "Tính liêm chính",
         "score": "1",
         "answer": "3"
     },
     {
-        "id": "ehs12",
-        "q": "Biện pháp phòng ngừa sự cố tai nạn lao động?",
+        "id": "ie3",
+        "q": "Tư tưởng chính của SPS là gì?",
         "img": "",
-        "a": "Kiểm tra phát hiện kịp thời các mối nguy hiểm",
-        "b": "Cải tiến, khắc phục mối nguy hiểm; cải thiện điều kiện lao động",
-        "c": "Đào tạo, tuyên truyền",
+        "a": "Lấy con người là trọng tâm",
+        "b": "Tối đa năng suất thông qua việc loại bỏ lãng phí",
+        "c": "Tối đa hóa lợi nhuận",
+        "d": "Lấy khách hàng là ưu tiên hàng đầu",
+        "score": "1",
+        "answer": "2"
+    },
+    {
+        "id": "ie4",
+        "q": "Mục đích của IE (Industrial Engineering) là gì?",
+        "img": "",
+        "a": "Nâng cao hiệu quả sản xuất của doanh nghiệp thông qua cải tiến năng suất lao động",
+        "b": "Nghiên cứu các phương pháp và kỹ thuật để sản xuất ra những sản phẩm có chất lượng tốt nhất, chi phí thấp nhất, an toàn và không ô nhiễm",
+        "c": "Đối tượng của IE là mọi người ở mọi tầng lớp và mọi khu vực, từ cấp cao nhất cho đến cấp thấp nhất",
         "d": "Cả 3 đáp án trên đều đúng",
         "score": "1",
         "answer": "4"
     },
     {
-        "id": "ehs13",
-        "q": "Tại các công đoạn sử dụng đến sơn phát sinh khí thải loại gì?",
+        "id": "ie5",
+        "q": "Mục tiêu của hoạt động 5S là gì?",
         "img": "",
-        "a": "Bụi nhôm",
-        "b": "Bụi silic",
-        "c": "Hợp chất hữu cơ dễ bay hơi",
-        "d": "Axit, bazo",
+        "a": "Loại bỏ lãng phí và bừa bộn tại khu vực làm việc",
+        "b": "Tập thói quen quản lý lãng phí bằng mắt",
+        "c": "Tạo một môi trường làm việc sạch sẽ, ngăn nắp, dễ dàng và thuận tiện trong công việc",
+        "d": "Cả 3 đáp án trên đều đúng",
         "score": "1",
-        "answer": "3"
+        "answer": "4"
     },
     {
-        "id": "ehs14",
-        "q": "Chất thải nào sau đây không phải là chất thải nguy hại?",
+        "id": "ie6",
+        "q": "Nội dung của hoạt động 5S không bao gồm điều nào sau đây?",
         "img": "",
-        "a": "Chất dễ lây nhiễm",
-        "b": "Chất dễ cháy nổ",
-        "c": "Chất dễ biến đổi",
-        "d": "Chất dễ ăn mòn",
+        "a": "Sàng lọc, Săn sóc",
+        "b": "Sẵn sàng",
+        "c": "Sắp xếp, Sạch sẽ",
+        "d": "Số lượng",
         "score": "1",
-        "answer": "3"
+        "answer": "4"
     },
     {
-        "id": "ehs15",
-        "q": "Tốc độ tối đa cho phép đối với các phương tiện giao thông khi đi qua khúc cua trong công ty là bao nhiêu?",
+        "id": "ie7",
+        "q": "Ý nghĩa của S4 - Săn sóc trong hoạt động 5S là gì?",
         "img": "",
-        "a": "≤ 5 km/h",
-        "b": "≤ 10km/h",
-        "c": "≤ 15km/h",
-        "d": "≤ 20km/h",
+        "a": "Quản lý và duy trì các hoạt động Sàng lọc, Sắp xếp, Sạch sẽ một cách liên tục",
+        "b": "Đảm bảo nơi làm việc luôn gọn gàng, sạch sẽ",
+        "c": "Luôn sắp xếp dụng cụ, vật liệu gọn gàng",
+        "d": "Liên tục kiểm tra, bảo dưỡng, vệ sinh máy móc, thiết bị",
         "score": "1",
         "answer": "1"
     },
     {
-        "id": "ehs16",
-        "q": "Đối tượng nào được tham gia khám sức khỏe định kỳ thông thường 1 lần/ 1 năm?",
+        "id": "ie8",
+        "q": "Triết lý của SPS là gì? ",
         "img": "",
-        "a": "Nhân viên sản xuất (operator)",
-        "b": "Kỹ thuật viên (technician)",
-        "c": "Toàn bộ nhân viên SEV",
-        "d": "Đáp án khác",
-        "score": "1",
-        "answer": "3"
-    },
-    {
-        "id": "ehs17",
-        "q": "Khi bị hóa chất bắn vào mắt, ta cần rửa mắt với nước sạch trong thời gian gian bao lâu?",
-        "img": "",
-        "a": "Ít nhất 15 phút",
-        "b": "5 phút",
-        "c": "10 phút",
-        "d": "Không cần rửa mắt",
-        "score": "1",
-        "answer": "1"
-    },
-    {
-        "id": "ehs18",
-        "q": "Phiếu dữ liệu an toàn hóa chất được dán thông báo ở đâu?",
-        "img": "",
-        "a": "Văn phòng làm việc",
-        "b": "Kho hóa chất",
-        "c": "Vị trí lưu trữ và sử dụng hóa chất",
-        "d": "Vị trí sử dụng hóa chất",
-        "score": "1",
-        "answer": "3"
-    },
-    {
-        "id": "ehs19",
-        "q": "Những loại khẩu trang nào được sử dụng khi làm việc tại công ty?",
-        "img": "",
-        "a": "Khẩu trang nhân viên mua tự do bên ngoài vào công ty",
-        "b": "Khẩu trang đã qua kiểm tra và được bộ phận EHS xác nhận đủ tiêu chuẩn sử dụng tại SEV",
-        "c": "Khẩu trang tái chế",
-        "d": "Tất cả các đáp án trên",
+        "a": "Tối đa hóa năng suất nhằm tạo ra những sản phẩm hàng đầu trên nền tảng hệ thống sản xuất của Samsung",
+        "b": "Tối đa hóa giá trị doanh nghiệp bằng việc tạo ra những sản phẩm hàng đầu trên nền tảng hệ thống sản xuất của Samsung",
+        "c": "Tối đa hóa năng suất bằng việc tạo ra những sản phẩm tốt rẻ trên nền tảng hệ thống sản xuất của Samsung",
+        "d": "Tối đa hóa giá trị doanh nghiệp nhằm tạo ra những sản phẩm tốt rẻ trên nền tảng hệ thống sản xuất của Samsung",
         "score": "1",
         "answer": "2"
     },
     {
-        "id": "ehs20",
-        "q": "Sau khi kết thúc công việc, nhân viên đi đá bóng tại sân bóng công ty, sau đó bị tai nạn / gẫy chân, có được coi là tai nạn lao động không?",
+        "id": "ie9",
+        "q": "Loại lãng phí là lãng phí nghiêm trọng nhất? ",
         "img": "",
-        "a": "Được coi là tai nạn lao động",
-        "b": "Tùy vào nguyên nhân để đưa ra kết luận",
-        "c": "Nếu sức khỏe bị suy giảm > 5% được coi là tai nạn lao động",
-        "d": "Không coi là tai nạn lao động",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs21",
-        "q": "Đối tượng nào được tham gia khám sức khỏe đặc biệt 2 lần/ năm?",
-        "img": "",
-        "a": "Nhân viên bộ phận CNC Team",
-        "b": "Nhân viên bộ phận Coating G",
-        "c": "Tất cả Nhân viên làm việc tại các vị trí đặc biệt (tiếp xúc hóa chất, tiếng ồn, X-ray, Crom, Silic…) ",
-        "d": "Đáp án khác",
-        "score": "1",
-        "answer": "3"
-    },
-    {
-        "id": "ehs22",
-        "q": "Trường hợp nào sau đây được coi là tai nạn lao động?",
-        "img": "",
-        "a": "Tại nơi làm việc và trong giờ làm việc (kể cả vệ sinh, nghỉ giải lao, cho con bú)",
-        "b": "Ngoài nơi làm việc hoặc ngoài giờ làm việc theo yêu cầu của quản lý",
-        "c": "Trên đường đi làm, trong khung thời gian hợp lý",
-        "d": "Tất cả các đáp án trên",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs23",
-        "q": "Hành động nào sau đây vi phạm hành lang Phòng Cháy Chữa Cháy?",
-        "img": "",
-        "a": "Để vật liệu dưới cửa shutter",
-        "b": "Che chắn bình cứu hỏa, họng nước cứu hỏa",
-        "c": "Che chắn cửa thoát hiểm",
-        "d": "Cả 3 đáp án trên",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs24",
-        "q": "Các bước cần phải làm trước khi tiến hành công việc hàn cắt, phát sinh nhiệt ?",
-        "img": "",
-        "a": "Thông báo quản lý – Tiến hành công việc",
-        "b": "Thông báo quản lý - Đăng ký giấy phép làm việc liên quan đến lửa - Xin giấy phép - Tiến hành công việc",
-        "c": "Tiến hành công việc - Đăng ký giấy phép làm việc liên quan đến lửa",
-        "d": "Thông báo quản lý - Đăng ký giấy phép làm việc liên quan đến lửa - Chuẩn bị thiết bị chữa cháy, quây bạt chống cháy xung quanh khu vực làm việc - Xin giấy phép - Tiến hành công việc",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs25",
-        "q": "Trách nhiệm phòng cháy, chữa cháy tại SEV là của ai ?",
-        "img": "",
-        "a": "Bộ phận Fire P",
-        "b": "Của lãnh đạo và toàn thể nhân viên SEV",
-        "c": "Của cảnh sát PCCC",
-        "d": "Tất cả các đáp án trên",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs26",
-        "q": "Tại SEV, khi có sự cố cháy, nhân viên có thể sử dụng thiết bị nào để báo động cho mọi người ?",
-        "img": "",
-        "a": "Sử dụng đầu báo khói, nhiệt",
-        "b": "Sử dụng loa thông báo",
-        "c": "Sử dụng trạm báo cháy bằng tay",
-        "d": "Cả 3 đáp án trên",
-        "score": "1",
-        "answer": "3"
-    },
-    {
-        "id": "ehs27",
-        "q": "Khi phát hiện bình cứu hỏa hết hạn ( đồng hồ đo áp ở vạch đỏ ), hỏng, han gỉ… trách nhiệm của bạn là gì ?",
-        "img": "",
-        "a": "Thông báo cho nhân viên phụ trách EHS tại xưởng",
-        "b": "Thấy đó là điều bình thường vì mình không quản lý",
-        "c": "Gọi điện 6114, thông báo cho bộ phận PCCC",
-        "d": "Đáp án 1 và 3 đúng",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs28",
-        "q": "Nếu vô tình gây ra cháy, bạn sẽ làm gì ?",
-        "img": "",
-        "a": "Hoảng hốt, bỏ chạy vì sợ bị kỷ luật",
-        "b": "Lặng lẽ chữa cháy rồi bỏ chạy khi không chữa được",
-        "c": "Gọi điện 6114 thông báo cháy và thoát hiểm",
-        "d": "Báo cháy, chữa cháy, thoát hiểm",
-        "score": "1",
-        "answer": "4"
-    },
-    {
-        "id": "ehs29",
-        "q": "Bạn sẽ làm gì khi bộ phận Phòng cháy chữa cháy tổ chức đào tạo, huấn luyện về PCCC & cứu nạn cứu hộ?",
-        "img": "",
-        "a": "Thấy rằng đây là kiến thức sẵn có của con người, không cần tham gia vì biết sẵn rồi…",
-        "b": "Miễn cưỡng tham gia cho xong vì bị bắt buộc",
-        "c": "Sẵn sàng tham gia vì đây là kiến thức cần thiết, giúp nâng cao và đảm bảo an toàn cho mình",
-        "d": "Đáp án khác",
-        "score": "1",
-        "answer": "3"
-    },
-    {
-        "id": "ehs30",
-        "q": "Khi phát hiện rò rỉ khí gas, bạn sẽ làm gì ?",
-        "img": "",
-        "a": "Khóa van cấp gas, bật quạt để thông thoáng khí gas bị rò rỉ, sau đó thoát hiểm ra bên ngoài",
-        "b": "Khóa van cấp gas, mở các cửa tại phòng bị rò rỉ khí gas, dùng bọt xà phòng xác định vị trí rò rỉ",
-        "c": "Đứng tại vị trí rò rỉ gọi điện báo cho cơ quan PCCC",
-        "d": "Đáp án 1 và 3 đúng",
+        "a": "Lãng phí tồn kho",
+        "b": "Lãng phí do sản xuất quá nhiều",
+        "c": "Lãng phí vận chuyển",
+        "d": "Lãng phí không gian",
         "score": "1",
         "answer": "2"
+    },
+    {
+        "id": "ie10",
+        "q": "Chọn đáp án đúng nhất về các cử động gây ra lãng phí?",
+        "img": "",
+        "a": "Loại bỏ sản phẩm lỗi, bắt vít, thay đổi khay rỗng",
+        "b": "Kiểm tra, lấy driver, lắp ráp PCB",
+        "c": "Thay đổi khay rỗng, loại bỏ sản phẩm lỗi, kiểm tra sản phẩm",
+        "d": "Tất cả các hoạt động trên",
+        "score": "1",
+        "answer": "3"
     }
 ]
-export const TestTime = 60 * 15 // seconds
-export const TestTitle = "Lý thuyết An toàn Lao động"
-export const EmpInfo = {
-    gen: "16787438",
-    name: "Khổng Minh Thảo"
-}
-export const PassScore = 15
+export const testBankList = [
+    {
+        testTitle: 'Kiểm tra kiến thức An ninh',
+        testData: AnNinhBank,
+        passScore: 8,
+        testTime: 60
+    },
+    {
+        testTitle: 'Kiểm tra kiến thức Nhân sự',
+        testData: HRBank,
+        passScore: 8,
+        testTime: 60
+    },
+    {
+        testTitle: 'Kiểm tra kiến thức An toàn Môi trường Sức khỏe',
+        testData: EHSBank,
+        passScore: 8,
+        testTime: 60
+    },
+    {
+        testTitle: 'Kiểm tra kiến thức Industry Engineer',
+        testData: IEBank,
+        passScore: 6,
+        testTime: 60
+    }
+]
