@@ -1,5 +1,6 @@
 // ■---- login\index.js
 import { Card, Stack, Typography, CardContent, Button, FormControlLabel, TextField, Switch } from "@mui/material"
+import LoadingButton from '@mui/lab/LoadingButton'
 import { useState } from "react"
 import { userList } from "./user"
 import { setUserSession } from "../userSession"
@@ -8,7 +9,7 @@ import CustomAppBar from "../customAppBar"
 import CustomHead from "../customHead"
 import LogInIcon from "@mui/icons-material/Login"
 
-const authenUser = (userId, password) => {
+const authUserFake = (userId, password) => {
     let userNo = userList.findIndex((user) => user.userId == userId)
     if (userNo >= 0 ) {
         if (userList[userNo].password == password) {
@@ -22,38 +23,40 @@ const authenUser = (userId, password) => {
 }
 
 // TEST API
-const authUserAPI = (userId, password) => {
-    fetch('/api/user/user', {
+const authUserAPI = async (userId, password) => {
+    const htmlRes = await fetch('/api/user/user', {
           method: 'POST',
           body: JSON.stringify({userId: userId, password: password})
     })
-    .then(res => res.json()) 
     //khi dùng fetch, response trả về là 1 HTTP Response, cần dùng method .json() để lấy được json từ body của nó
-    .then(data => {
-        console.log('response from server...')
-        console.log(data)
-    })
+    const data = await htmlRes.json()
+    console.log('response from server...')
+    console.log(data)
+    return data
 }
 // TEST API
 
-let password = ''
-
 export default function Login({pageName="Login"}) {
     const [authStt, setAuthStt] = useState('')
+    const [loadingBtn, setLoadingBtn] = useState(false)
     const [userId, setUserId] = useState('')
+    const [password, setPassword] = useState('')
     const [isChecked, setIsChecked] = useState(false)
 
     const handleClick = () => {
         if (userId=='' || password=='') {
             alert('không để trống')
         } else {
-            let authCheck = authenUser(userId, password)
-            authUserAPI(userId, password)
-            setAuthStt(authCheck.text)
-            if (authCheck.code == 'success') {
-                let status = setUserSession(authCheck.data.userId, authCheck.data.name, authCheck.data.authority)
-                Router.back()
-            }
+            //let authCheck = authUserFake(userId, password)
+            setLoadingBtn(true)
+            authUserAPI(userId, password).then((res) => {
+              setAuthStt(res.text)
+              setLoadingBtn(false)
+              if (res.code == 'success') {
+                  let status = setUserSession(res.data.userId, res.data.name, res.data.authority)
+                  Router.back()
+              }              
+            })
         }
     }
     const handleCheckbox = (e) => {
@@ -86,7 +89,7 @@ export default function Login({pageName="Login"}) {
                                     size="small" 
                                     id="password" 
                                     label="Password" 
-                                    onChange={(e) => {password = e.target.value}} 
+                                    onChange={(e) => setPassword(e.target.value)} 
                                     type="password" 
                                 />
                             </Stack>
@@ -104,7 +107,7 @@ export default function Login({pageName="Login"}) {
                             />
                         </Stack>
                         <Typography sx={{mt:"25px", color:"#FF0000", textAlign:"center"}}>{authStt}</Typography>
-                        <Button sx={{mt:"30px"}} variant="contained" fullWidth onClick={handleClick} startIcon={<LogInIcon/>}>Login</Button>
+                        <LoadingButton loading={loadingBtn} sx={{mt:"30px"}} variant="contained" fullWidth onClick={handleClick} startIcon={<LogInIcon/>}>Login</LoadingButton>
                     </CardContent>
                 </Card>
             </Stack>
