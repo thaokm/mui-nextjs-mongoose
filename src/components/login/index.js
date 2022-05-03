@@ -22,7 +22,7 @@ const authUserFake = (userId, password) => {
     }    
 }
 
-// TEST API
+// LOGIN API USER
 const authUserAPI = async (userId, password) => {
     const htmlRes = await fetch('/api/user/user', {
           method: 'POST',
@@ -34,7 +34,18 @@ const authUserAPI = async (userId, password) => {
     console.log(data)
     return data
 }
-// TEST API
+// LOGIN API EMP
+const authEmpAPI = async (gen, phone) => {
+    const htmlRes = await fetch('/api/user/emp', {
+          method: 'POST',
+          body: JSON.stringify({gen: gen, phone: phone})
+    })
+    //khi dùng fetch, response trả về là 1 HTTP Response, cần dùng method .json() để lấy được json từ body của nó
+    const data = await htmlRes.json()
+    console.log('response from server...')
+    console.log(data)
+    return data
+}
 
 export default function Login({pageName="Login"}) {
     const [authStt, setAuthStt] = useState('')
@@ -49,14 +60,27 @@ export default function Login({pageName="Login"}) {
         } else {
             //let authCheck = authUserFake(userId, password)
             setLoadingBtn(true)
-            authUserAPI(userId, password).then((res) => {
-              setAuthStt(res.text)
-              setLoadingBtn(false)
-              if (res.code == 'success') {
-                  let status = setUserSession(res.data.userId, res.data.name, res.data.authority)
-                  Router.back()
-              }              
-            })
+            if (!isChecked) {
+                console.log(`Đăng nhập bằng user, password`)
+                authUserAPI(userId, password).then((res) => {
+                  setAuthStt(res.text)
+                  setLoadingBtn(false)
+                  if (res.code == 'success') {
+                      let status = setUserSession(res.data.userId, res.data.name, res.data.authority)
+                      Router.back()
+                  }              
+                })              
+            } else {
+                console.log(`Đăng nhập bằng GEN, phone`)
+                authEmpAPI(userId, password).then((res) => {
+                  setAuthStt(res.text)
+                  setLoadingBtn(false)
+                  if (res.code == 'success') {
+                      let status = setUserSession(res.data.gen, res.data.name, "emp")
+                      Router.back()
+                  }              
+                })              
+            }
         }
     }
     const handleCheckbox = (e) => {
@@ -102,7 +126,7 @@ export default function Login({pageName="Login"}) {
                                         name="Save ID"
                                     />
                                 }
-                                label="Save ID"
+                                label="Đăng nhập bằng GEN"
                                 sx={{margin:"0px auto 0px auto"}}
                             />
                         </Stack>

@@ -57,14 +57,14 @@ export default function Exams({pageName="Examination System", userName, userId})
             </>:
             <>
                 <CustomHead title={pageName} />
-                <CustomAppBar pageName={pageName} button={<SubmitBtn />} />
+                <CustomAppBar pageName={pageName} button={<SubmitBtn username={userName} userId={userId} testTitle={bank.testTitle}/>} />
                 <Stack direction="column" justifyContent="center" alignItems="center">
                     <Stack direction="row" justifyContent="center" sx={{margin:"15px 0px 15px 0px"}}>
                         <Typography color="info" sx={{fontWeight:"bold", textAlign:"center", fontSize:"26px", color:"#4285f4"}}>
                             BÀI THI: {bank.testTitle.toUpperCase()}
                         </Typography>
                     </Stack>
-                    <Timer time={bank.testTime} alertTime={Math.floor(bank.testTime/10)} />
+                    <Timer username={userName} userId={userId} testTitle={bank.testTitle} time={bank.testTime} alertTime={Math.floor(bank.testTime/10)} />
                     <ResultNotice name={userName} gen={userId} passScore={bank.passScore} />
                     <Box justifyContent="center" alignItems="center" sx={{maxWidth:"750px"}}>
                         {testData.map((quest, no) => {

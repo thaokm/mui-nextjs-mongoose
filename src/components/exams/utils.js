@@ -41,7 +41,27 @@ export function examScoring(data) {
     }
 }
 
-export function submitExam(globalState, setGlobalState, timeup) {
+// API lưu kết quả bài thi vào db
+const saveExamResultToDb = async (username, userId, testTitle) => {
+    const examResult = {
+      gen: userId,
+      name: username,
+      testTitle: testTitle,
+      result: resultData
+    }
+    const htmlRes = await fetch('/api/exam/submitResult', {
+        method: 'POST',
+        body: JSON.stringify(examResult)
+    })
+    //khi dùng fetch, response trả về là 1 HTTP Response, cần dùng method .json() để lấy được json từ body của nó
+    const data = await htmlRes.json()
+    console.log('response from server...')
+    console.log(data)
+    return data
+}
+// API lưu kết quả bài thi vào db
+
+export function submitExam(username, userId, testTitle, globalState, setGlobalState, timeup) {
     let finalScore = examScoring(resultData)
     let confimation
     if (!timeup) {
@@ -50,5 +70,8 @@ export function submitExam(globalState, setGlobalState, timeup) {
     if (confimation || timeup) {
         alert(`Đã làm: ${finalScore.select}/${finalScore.total} câu\nĐúng ${finalScore.correct}/${finalScore.select} câu\nTổng điểm: ${finalScore.score}`)
         setGlobalState((globalState) => ({...globalState, showResult: true}))
+        saveExamResultToDb(username, userId, testTitle).then((data) => {
+          alert(`Đã lưu kết quả bài thi`)
+        })
     }
 }

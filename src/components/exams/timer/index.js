@@ -5,7 +5,7 @@ import AccessAlarmIcon from "@mui/icons-material/AccessAlarm"
 import { ExamContext } from "../examContextProvider"
 import { secTohhmmss, submitExam } from "../utils"
 
-export default function Timer({time, alertTime}) {
+export default function Timer({username, userId, testTitle, time, alertTime}) {
     const [seconds, setSeconds] = useState(time)
     const [globalState, setGlobalState] = useContext(ExamContext)
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function Timer({time, alertTime}) {
         }, 1000)
         if (seconds <= 0) {
           clearInterval(interval)
-          submitExam(globalState, setGlobalState, true)
+          submitExam(username, userId, testTitle, globalState, setGlobalState, true)
           console.log('Hết thời gian')
         }
         if (globalState.showResult) {
