@@ -28,7 +28,7 @@ export default async function emp(req, res) {
       break;
     case 'GET':
       console.log({code: 'GET to api/user/emp'})
-      Emp.find().exec((err, result) => {
+      Emp.find().limit(100).exec((err, result) => {
         res.send(result)
       })
       break;    

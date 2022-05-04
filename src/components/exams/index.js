@@ -9,7 +9,16 @@ import SubmitBtn from "./submit"
 import ResultNotice from "./resultNotice"
 import CustomHead from "../customHead"
 import { useEffect, useState } from "react"
-import { initResultData, resultData } from "./utils";
+import { initResultData, resultData } from "./utils"
+
+// API get TestBank data
+const getTestbankListAPI = async () => {
+    const htmlRes = await fetch('/api/exam/testbank', {
+        method: 'GET'
+    })
+    const data = await htmlRes.json()
+    return data
+}
 
 let testList
 export default function Exams({pageName="Examination System", userName, userId}) {
@@ -21,16 +30,25 @@ export default function Exams({pageName="Examination System", userName, userId})
     } // Đối tượng gồm testData, testTitle, passScore, testTime
     const [bank, setBank] = useState(initBank)
     const [testData, setTestData] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
     //render các giá trị khởi tạo cho bài thi gồm Đề thi (testData) và kết quả thi (resultData)
     useEffect(() => {
-        testList = [...testBankList]
-        initResultData(bank.testData)
-        setTestData([...bank.testData])
+        // testList = [...testBankList]
+        // initResultData(bank.testData)
+        // setTestData([...bank.testData])
+        getTestbankListAPI().then((data) => {
+            console.log(data)
+            testList = [...data]
+            initResultData(bank.testData)
+            setTestData([...bank.testData])
+            setIsLoading(false)
+        })
     }, [bank.testTitle])
     // lựa chọn bài thi từ ngân hàng thi, render lại trang khi nhận được option
     const comboBoxChange = (option) => {
         setBank(testList[option.id])
     }
+    if (isLoading) return <p>Đang tải trang...</p>
     return (
         <ExamContextProvider>
             {(userName!=null && userId!=null)?
@@ -90,7 +108,7 @@ export default function Exams({pageName="Examination System", userName, userId})
                     </Typography>
                 </Stack>
             </>:              
-            "Loading..."}
+            "Chuyển hướng..."}
         </ExamContextProvider>
     )
 }

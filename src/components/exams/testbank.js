@@ -14,7 +14,7 @@ export const AnNinhBank = [
     {
         "id": "anninh2",
         "q": "Quy định về trang phục khi vào công ty là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Mặc quần áo đồng phục khi vào xưởng sản xuất",
         "b": "Không sử dụng các trang phục phản cảm, nhiều kim loại, quần bò, quần ngố, áo ba lỗ, dép lê",
         "c": "Không mang ô dù, đeo khẩu trang, mũ khi đi qua khu vực kiểm tra an ninh",
@@ -36,7 +36,7 @@ export const AnNinhBank = [
     {
         "id": "anninh4",
         "q": "Thời gian mượn thẻ tạm tối đa là bao lâu?",
-        "img": "",
+        "img": "empty",
         "a": "Tối đa 01 ngày kể từ khi mượn thẻ",
         "b": "Tối đa 01 tuần kể từ khi mượn thẻ",
         "c": "Trả ngay khi kết thúc ca làm việc, tối đa 15h",
@@ -47,7 +47,7 @@ export const AnNinhBank = [
     {
         "id": "anninh5",
         "q": "Trong trường hợp phát hiện nhân viên vi phạm chính sách an ninh, trách nhiệm và quyền hạn của bộ phận An ninh là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Điều tra, xử lý vụ việc",
         "b": "Đề xuất khen thưởng & kỷ luật cá nhân liên quan",
         "c": "Phối hợp với bên thứ 3 (vendor, đối tác, công an…)",
@@ -58,7 +58,7 @@ export const AnNinhBank = [
     {
         "id": "anninh6",
         "q": "Quy định nào sau đây là SAI khi nói về việc kiểm tra an ninh đối với người?",
-        "img": "",
+        "img": "empty",
         "a": "Khi cửa từ có tín hiệu, kiểm tra lại đủ 10 bước bằng tay dò",
         "b": "Cửa từ có tín hiệu ở đâu thì kiểm tra lại bằng tay dò ở đó",
         "c": "Chỉ số kỹ thuật của cửa bầu và các cửa khác là như nhau",
@@ -69,7 +69,7 @@ export const AnNinhBank = [
     {
         "id": "anninh7",
         "q": "Nội dung nào dưới đây là đúng khi nói về SMM?",
-        "img": "",
+        "img": "empty",
         "a": "Bắt buộc cài SMM với điện thoại dùng trong xưởng",
         "b": "SMM quản lý chức năng camera của điện thoại",
         "c": "Cài SMM thì không phải dán tem camera khi vào khu vực bảo mật",
@@ -80,7 +80,7 @@ export const AnNinhBank = [
     {
         "id": "anninh8",
         "q": "Các thiết bị an ninh nào sau đây được sử dụng để hỗ trợ kiểm tra an ninh đối với người?",
-        "img": "",
+        "img": "empty",
         "a": "Tay dò",
         "b": "Cửa từ",
         "c": "Xray",
@@ -91,7 +91,7 @@ export const AnNinhBank = [
     {
         "id": "anninh9",
         "q": "Nhân viên được công ty cấp điện thoại để hỗ trợ công việc, nếu làm mất, nhân viên sẽ phải bồi thường?",
-        "img": "",
+        "img": "empty",
         "a": "50% giá trị điện thoại bị mất",
         "b": "75% giá trị điện thoại bị mất",
         "c": "100% giá trị điện thoại bị mất",
@@ -102,7 +102,7 @@ export const AnNinhBank = [
     {
         "id": "anninh10",
         "q": "Nhân viên mượn thẻ, cho người khác mượn thẻ hoặc chấm công hộ, có thể bị xử lý kỷ luật?",
-        "img": "",
+        "img": "empty",
         "a": "Nhắc nhở",
         "b": "Cảnh cáo văn bản",
         "c": "Cảnh cáo văn bản ~ Khiển trách",
@@ -115,7 +115,7 @@ export const HRBank = [
     {
         "id": "hr1",
         "q": "Hiện tại, giữa Công ty và nhân viên ký kết mấy loại hợp đồng có kỳ hạn?",
-        "img": "",
+        "img": "empty",
         "a": "1",
         "b": "2",
         "c": "3",
@@ -126,7 +126,7 @@ export const HRBank = [
     {
         "id": "hr2",
         "q": "Sau khi hoàn thành hợp đồng có kỳ hạn 2 năm, nhân viên sẽ được ký hợp đồng có thời hạn bao lâu?",
-        "img": "",
+        "img": "empty",
         "a": "2 năm",
         "b": "3 năm",
         "c": "Không xác định thời hạn",
@@ -137,7 +137,7 @@ export const HRBank = [
     {
         "id": "hr3",
         "q": "Mức hưởng Bảo hiểm Thất nghiệp (BHTN) theo quy định là bao nhiêu?",
-        "img": "",
+        "img": "empty",
         "a": "Bằng 60% mức lương bình quân đóng BHTN của 6 tháng liền kề trước khi thất nghiệp",
         "b": "Bằng 60% mức lương bình quân đóng BHXH của 6 tháng liền kề trước khi thất nghiệp",
         "c": "Bằng 80% mức thu nhập bình quân đóng BHTN của 6 tháng liền kề trước khi thất nghiệp",
@@ -148,7 +148,7 @@ export const HRBank = [
     {
         "id": "hr4",
         "q": "Nhân viên sản xuất và kỹ thuật viên mới có thời gian đào tạo nghề là bao lâu?",
-        "img": "",
+        "img": "empty",
         "a": "7 ngày",
         "b": "24 ngày",
         "c": "30 ngày",
@@ -159,7 +159,7 @@ export const HRBank = [
     {
         "id": "hr5",
         "q": "Thời gian bắt đầu và kết thúc ca làm việc (Ca ngày) của chế độ làm việc 2 ca 2 kíp là?",
-        "img": "",
+        "img": "empty",
         "a": "07:30 ~ 16:48",
         "b": "08:00 ~ 17:48",
         "c": "08:00 ~ 17:00",
@@ -170,7 +170,7 @@ export const HRBank = [
     {
         "id": "hr6",
         "q": "Thời gian bắt đầu và kết thúc ca làm việc (Ca ngày) của chế độ làm việc 2 ca 3 kíp (bao gồm thời gian làm thêm) là?",
-        "img": "",
+        "img": "empty",
         "a": "06:00 ~ 14:00",
         "b": "08:00 ~ 16:00",
         "c": "08:00 ~ 17:00",
@@ -181,7 +181,7 @@ export const HRBank = [
     {
         "id": "hr7",
         "q": "Tổng thời gian làm việc theo quy định của Công ty trong một tuần của chế độ làm việc 2 ca 2 kíp, hành chính là",
-        "img": "",
+        "img": "empty",
         "a": "40 giờ",
         "b": "44 giờ",
         "c": "48 giờ",
@@ -192,7 +192,7 @@ export const HRBank = [
     {
         "id": "hr8",
         "q": "Nhân viên sản xuất trực tiếp được nghỉ giải lao nhiêu phút trong một ngày làm việc?",
-        "img": "",
+        "img": "empty",
         "a": "10 phút",
         "b": "15 phút",
         "c": "20 phút",
@@ -203,7 +203,7 @@ export const HRBank = [
     {
         "id": "hr9",
         "q": "Nhân viên sản xuất trực tiếp được nghỉ đi ăn giữa ca trong khoảng thời gian bao lâu?",
-        "img": "",
+        "img": "empty",
         "a": "40 phút",
         "b": "50 phút",
         "c": "60 phút",
@@ -214,7 +214,7 @@ export const HRBank = [
     {
         "id": "hr10",
         "q": "Với nhóm 2 ca 2 kíp, nhân viên làm ca ngày đến mấy giờ thì được tính thời gian ăn bữa phụ vào thời gian làm việc?",
-        "img": "",
+        "img": "empty",
         "a": "18:18",
         "b": "18:48",
         "c": "19:00",
@@ -227,7 +227,7 @@ export const EHSBank = [
     {
         "id": "ehs1",
         "q": "Hóa chất tại SEV có được đánh giá mức độ nguy hại trước khi sử dụng không?",
-        "img": "",
+        "img": "empty",
         "a": "Không được đánh giá",
         "b": "Có được đánh giá",
         "c": "Tùy thuộc từng loại hoát chất",
@@ -238,7 +238,7 @@ export const EHSBank = [
     {
         "id": "ehs2",
         "q": "Bộ phận chịu trách nhiệm kiểm soát thành phần hóa chất tại công ty?",
-        "img": "",
+        "img": "empty",
         "a": "Bộ phận EHS",
         "b": "Bộ phận HR",
         "c": "Bộ phận sử dụng",
@@ -249,7 +249,7 @@ export const EHSBank = [
     {
         "id": "ehs3",
         "q": "Tại công ty, kết quả đo môi trường lao động được niêm yết ở đâu?",
-        "img": "",
+        "img": "empty",
         "a": "Bảng tin của bộ phận",
         "b": "Bảng tin của canteen",
         "c": "Trên các cột trong xưởng sản xuất",
@@ -260,7 +260,7 @@ export const EHSBank = [
     {
         "id": "ehs4",
         "q": "Bình nào sử dụng cho đám cháy kim loại?",
-        "img": "",
+        "img": "empty",
         "a": "Bình chữa cháy loại D",
         "b": "Bình chữa cháy khí sạch",
         "c": "Bình chữa cháy loại K",
@@ -271,7 +271,7 @@ export const EHSBank = [
     {
         "id": "ehs5",
         "q": "Bình nào sử dụng cho đám cháy dầu mỡ?",
-        "img": "",
+        "img": "empty",
         "a": "Bình chữa cháy ABC",
         "b": "Bình chữa cháy loại K",
         "c": "Bình chữa cháy CO2",
@@ -293,7 +293,7 @@ export const EHSBank = [
     {
         "id": "ehs7",
         "q": "Yêu cầu khi kiểm tra an toàn xe nâng hàng là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Người vận hành mang giầy bảo hộ, mũ bảo hộ",
         "b": "Kiểm tra chất lượng hàng hóa khi chở có tốt không",
         "c": "Kiểm tra đai an toàn, tính năng của phanh, trạng thái hoạt động của đèn báo, đèn hậu, đèn xi nhan",
@@ -304,7 +304,7 @@ export const EHSBank = [
     {
         "id": "ehs8",
         "q": "Thiết bị được lắp đặt  để cách ly vùng nguy hiểm với người, ngăn ngừa người đi vào vùng nguy hiểm được gọi là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Thiết bị cảnh báo",
         "b": "Thiết bị điều khiển từ xa",
         "c": "Thiết bị bảo hiểm",
@@ -315,7 +315,7 @@ export const EHSBank = [
     {
         "id": "ehs9",
         "q": "Mục đích của công tác an toàn, vệ sinh lao động là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Hạn chế đến mức thấp nhất tai nạn lao động, thương tích cho người lao động;",
         "b": "Đảm bảo sức khoẻ, tránh mắc bệnh nghề nghiệp do điều kiện lao động xấu gây ra;",
         "c": "Bồi dưỡng phục hồi kịp thời và duy trì sức khoẻ, khả năng lao động cho người lao động sau khi sản xuất;",
@@ -326,7 +326,7 @@ export const EHSBank = [
     {
         "id": "ehs10",
         "q": "Nguyên nhân gây ra tai nạn lao động chủ yếu là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Do nguyên nhân con người",
         "b": "Do máy móc thiết bị không an toàn",
         "c": "Do môi trường lao động",
@@ -339,7 +339,7 @@ export const IEBank = [
    {
         "id": "ie1",
         "q": "Triết lý và tư tưởng SPS là viết tắt của cụm từ gì?",
-        "img": "",
+        "img": "empty",
         "a": "Samsung Production System (Hệ thống sản xuất Samsung)",
         "b": "Samsung Protection System (Hệ thống phòng vệ Samsung)",
         "c": "Samsung Production Solution (Giải pháp sản xuất Samsung)",
@@ -350,7 +350,7 @@ export const IEBank = [
     {
         "id": "ie2",
         "q": "Điều nào sau đây không nằm trong các Giá trị trọng tâm của Samsung?",
-        "img": "",
+        "img": "empty",
         "a": "Con người",
         "b": "Thay đổi",
         "c": "Môi trường",
@@ -361,7 +361,7 @@ export const IEBank = [
     {
         "id": "ie3",
         "q": "Tư tưởng chính của SPS là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Lấy con người là trọng tâm",
         "b": "Tối đa năng suất thông qua việc loại bỏ lãng phí",
         "c": "Tối đa hóa lợi nhuận",
@@ -372,7 +372,7 @@ export const IEBank = [
     {
         "id": "ie4",
         "q": "Mục đích của IE (Industrial Engineering) là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Nâng cao hiệu quả sản xuất của doanh nghiệp thông qua cải tiến năng suất lao động",
         "b": "Nghiên cứu các phương pháp và kỹ thuật để sản xuất ra những sản phẩm có chất lượng tốt nhất, chi phí thấp nhất, an toàn và không ô nhiễm",
         "c": "Đối tượng của IE là mọi người ở mọi tầng lớp và mọi khu vực, từ cấp cao nhất cho đến cấp thấp nhất",
@@ -383,7 +383,7 @@ export const IEBank = [
     {
         "id": "ie5",
         "q": "Mục tiêu của hoạt động 5S là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Loại bỏ lãng phí và bừa bộn tại khu vực làm việc",
         "b": "Tập thói quen quản lý lãng phí bằng mắt",
         "c": "Tạo một môi trường làm việc sạch sẽ, ngăn nắp, dễ dàng và thuận tiện trong công việc",
@@ -394,7 +394,7 @@ export const IEBank = [
     {
         "id": "ie6",
         "q": "Nội dung của hoạt động 5S không bao gồm điều nào sau đây?",
-        "img": "",
+        "img": "empty",
         "a": "Sàng lọc, Săn sóc",
         "b": "Sẵn sàng",
         "c": "Sắp xếp, Sạch sẽ",
@@ -405,7 +405,7 @@ export const IEBank = [
     {
         "id": "ie7",
         "q": "Ý nghĩa của S4 - Săn sóc trong hoạt động 5S là gì?",
-        "img": "",
+        "img": "empty",
         "a": "Quản lý và duy trì các hoạt động Sàng lọc, Sắp xếp, Sạch sẽ một cách liên tục",
         "b": "Đảm bảo nơi làm việc luôn gọn gàng, sạch sẽ",
         "c": "Luôn sắp xếp dụng cụ, vật liệu gọn gàng",
@@ -416,7 +416,7 @@ export const IEBank = [
     {
         "id": "ie8",
         "q": "Triết lý của SPS là gì? ",
-        "img": "",
+        "img": "empty",
         "a": "Tối đa hóa năng suất nhằm tạo ra những sản phẩm hàng đầu trên nền tảng hệ thống sản xuất của Samsung",
         "b": "Tối đa hóa giá trị doanh nghiệp bằng việc tạo ra những sản phẩm hàng đầu trên nền tảng hệ thống sản xuất của Samsung",
         "c": "Tối đa hóa năng suất bằng việc tạo ra những sản phẩm tốt rẻ trên nền tảng hệ thống sản xuất của Samsung",
@@ -427,7 +427,7 @@ export const IEBank = [
     {
         "id": "ie9",
         "q": "Loại lãng phí là lãng phí nghiêm trọng nhất? ",
-        "img": "",
+        "img": "empty",
         "a": "Lãng phí tồn kho",
         "b": "Lãng phí do sản xuất quá nhiều",
         "c": "Lãng phí vận chuyển",
@@ -438,7 +438,7 @@ export const IEBank = [
     {
         "id": "ie10",
         "q": "Chọn đáp án đúng nhất về các cử động gây ra lãng phí?",
-        "img": "",
+        "img": "empty",
         "a": "Loại bỏ sản phẩm lỗi, bắt vít, thay đổi khay rỗng",
         "b": "Kiểm tra, lấy driver, lắp ráp PCB",
         "c": "Thay đổi khay rỗng, loại bỏ sản phẩm lỗi, kiểm tra sản phẩm",

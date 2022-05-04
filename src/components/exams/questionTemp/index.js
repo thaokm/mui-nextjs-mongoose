@@ -30,7 +30,7 @@ export default function QuestionTemp(props) {
                 >
                     Câu hỏi {no}: {q}
                 </Typography>
-                {img!=''?<CardMedia component="img" image={img} alt="Câu hỏi hình ảnh"></CardMedia>:''}
+                {img!='empty'?<CardMedia component="img" image={img} alt="Câu hỏi hình ảnh"></CardMedia>:''}
                 <Divider sx={{marginBottom:"10px"}}/>
                 <FormLabel id={`question-${id}`}>[{score} điểm] chọn 1 phương án:</FormLabel>
                 <RadioGroup
@@ -38,10 +38,10 @@ export default function QuestionTemp(props) {
                     onChange={handleRadioChange}
                     disabled={!globalState.showResult}
                 >
-                {a!=""?<FormControlLabel value={1} control={<Radio disabled={globalState.showResult}/>} label={`A. ${a}`} />:""}
-                {b!=""?<FormControlLabel value={2} control={<Radio disabled={globalState.showResult}/>} label={`B. ${b}`} />:""}
-                {c!=""?<FormControlLabel value={3} control={<Radio disabled={globalState.showResult}/>} label={`C. ${c}`} />:""}
-                {d!=""?<FormControlLabel value={4} control={<Radio disabled={globalState.showResult}/>} label={`D. ${d}`} />:""}
+                {a!="empty"?<FormControlLabel value={1} control={<Radio disabled={globalState.showResult}/>} label={`A. ${a}`} />:""}
+                {b!="empty"?<FormControlLabel value={2} control={<Radio disabled={globalState.showResult}/>} label={`B. ${b}`} />:""}
+                {c!="empty"?<FormControlLabel value={3} control={<Radio disabled={globalState.showResult}/>} label={`C. ${c}`} />:""}
+                {d!="empty"?<FormControlLabel value={4} control={<Radio disabled={globalState.showResult}/>} label={`D. ${d}`} />:""}
                 </RadioGroup>
                 <Divider sx={{marginBottom:"10px"}}/>
                 <Stack 
