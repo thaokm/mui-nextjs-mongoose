@@ -3,6 +3,6 @@ import Workforce from "../components/workforce"
 
 export default function WorkforcePage() {
   return(
-    <Workforce />
+    <Workforce pageName="RB WORKFORCE"/>
   )
 }
