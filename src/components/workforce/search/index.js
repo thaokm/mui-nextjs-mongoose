@@ -1,9 +1,10 @@
 // components/workforce/search/index.js
-import { Card, TextField, Grid } from '@mui/material'
+import { Card, TextField, Grid, Typography } from '@mui/material'
 import SearchIcon from "@mui/icons-material/Search"
 import { LoadingButton } from "@mui/lab"
 import { useState, useContext } from 'react'
-import { WorkforceContext } from "../workforceContextProvider";
+import { WorkforceContext } from "../workforceContextProvider"
+import SaveExcelBtn from '../../../components/saveExcelBtn'
 
 export default function EmpSearch() {
     const initSearchConditions = {
@@ -72,7 +73,11 @@ export default function EmpSearch() {
                     />
                 </Grid>
                 <Grid item>
-                    <LoadingButton color="primary" loading={loadingBtn} sx={{margin:"auto"}} variant="contained" onClick={handleClick} startIcon={<SearchIcon/>}>Search</LoadingButton>
+                    <LoadingButton color="primary" loading={loadingBtn} sx={{mr:"20px"}} variant="contained" onClick={handleClick} startIcon={<SearchIcon/>}>Search</LoadingButton>
+                    <SaveExcelBtn filename="list" title="Employee List" data={globalState.tableData}/>
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography sx={{textAlign:"center", margin:"auto"}}>{globalState.tableData.length>0?`Found ${globalState.tableData.length} entri(es)`:``}</Typography>
                 </Grid>
             </Grid>
         </Card>

@@ -18,6 +18,50 @@ export default function Home({pageName="Home"}) {
                 <Card sx={{width:345, height:330, margin:"20px"}}>
                     <CardMedia
                         component="img"
+                        alt="workforce"
+                        height="145"
+                        image="/res/workforceMagt.jpeg"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                        Workforce Management
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                        QUẢN LÝ NHÂN LỰC<br/>
+                        Thông tin nhân viên<br/>
+                        Trạng thái nhân lực<br/>
+                        </Typography>
+                    </CardContent>
+                    <Divider />
+                    <CardActions>
+                        <Button href='/workforce' size="ms" variant="text">TIẾP TỤC </Button>
+                    </CardActions>
+                </Card>
+                <Card sx={{width:345, height:330, margin:"20px"}}>
+                    <CardMedia
+                        component="img"
+                        alt="emp service"
+                        height="145"
+                        image="/res/empService.jpeg"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                        Employee Service Center
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                        TRUNG TÂM HỖ TRỢ NHÂN VIÊN<br/>
+                        Xử lý thủ tục chính sách cho người lao động<br/>
+                        Tiếp nhận góp ý, chia sẻ cởi mở
+                        </Typography>
+                    </CardContent>
+                    <Divider />
+                    <CardActions>
+                        <Button href='/hrService' size="ms" variant="text">TIẾP TỤC </Button>
+                    </CardActions>
+                </Card>
+                <Card sx={{width:345, height:330, margin:"20px"}}>
+                    <CardMedia
+                        component="img"
                         alt="exam system"
                         height="145"
                         image="/res/exam.jpeg"
@@ -40,45 +84,23 @@ export default function Home({pageName="Home"}) {
                 <Card sx={{width:345, height:330, margin:"20px"}}>
                     <CardMedia
                         component="img"
-                        alt="green iguana"
+                        alt="master data"
                         height="145"
-                        image="/res/workforceMagt.jpeg"
+                        image="/res/masterData.jpeg"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                        Workforce Management
+                        Master Data Management
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        QUẢN LÝ NHÂN LỰC<br/>
-                        Thông tin nhân viên<br/>
-                        Trạng thái nhân lực<br/>
+                        QUẢN LÝ DỮ LIỆU MASTER<br/>
+                        Upload, backup dữ liệu<br/>
+                        Data analytics<br/>
                         </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions>
-                        <Button href='/workforce' size="ms" variant="text">TIẾP TỤC </Button>
-                    </CardActions>
-                </Card>
-                <Card sx={{width:345, height:330, margin:"20px"}}>
-                    <CardMedia
-                        component="img"
-                        alt="green iguana"
-                        height="145"
-                        image="/res/empService.jpeg"
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                        Employee Service Center
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                        TRUNG TÂM HỖ TRỢ NHÂN VIÊN<br/>
-                        Xử lý thủ tục chính sách cho người lao động<br/>
-                        Tiếp nhận góp ý, chia sẻ cởi mở
-                        </Typography>
-                    </CardContent>
-                    <Divider />
-                    <CardActions>
-                        <Button href='/hrService' size="ms" variant="text">TIẾP TỤC </Button>
+                        <Button href='/masterData' size="ms" variant="text">TIẾP TỤC</Button>
                     </CardActions>
                 </Card>
             </Grid>

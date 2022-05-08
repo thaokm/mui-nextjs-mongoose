@@ -1,3 +1,4 @@
+// api/user/emp.js
 import {Emp} from '../../../db/schema/emp'
 import connectMongoose from '../../../db/connect'
 

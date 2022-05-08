@@ -1,5 +1,5 @@
 // ■---- exams\index.js
-import { Stack, Typography, Box, Autocomplete, TextField } from "@mui/material"
+import { Stack, Typography, Box, Autocomplete, TextField, CircularProgress } from "@mui/material"
 import { testBankList } from "./testbank"
 import ExamContextProvider  from './examContextProvider'
 import QuestionTemp from "./questionTemp"
@@ -48,11 +48,10 @@ export default function Exams({pageName="Examination System", userName, userId})
     const comboBoxChange = (option) => {
         setBank(testList[option.id])
     }
-    if (isLoading) return <p>Đang tải trang...</p>
+    if (isLoading) return <Stack direction="row" alignItems="center" justifyContent="center"><CircularProgress size="16px"/> Đang tải dữ liệu...</Stack>
     return (
         <ExamContextProvider>
-            {(userName!=null && userId!=null)?
-            (testData.length==0)?
+            {(testData.length==0)?
             <>
                 <CustomHead title={pageName} />
                 <CustomAppBar pageName={pageName} />
@@ -107,8 +106,7 @@ export default function Exams({pageName="Examination System", userName, userId})
                         copyright © 2022 ThaoKM
                     </Typography>
                 </Stack>
-            </>:              
-            "Chuyển hướng..."}
+            </>}
         </ExamContextProvider>
     )
 }

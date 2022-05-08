@@ -1,3 +1,4 @@
+// pages/api/exam/submitResult.js
 import {ExamResult} from '../../../db/schema/examResult'
 import connectMongoose from '../../../db/connect'
 

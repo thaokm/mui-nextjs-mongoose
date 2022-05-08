@@ -13,7 +13,11 @@ export default async function emp(req, res) {
       console.log(searchConditions)
       Object.keys(searchConditions).forEach(key => {
           if (searchConditions[key] != '') {
-              searchBody[key] = searchConditions[key]
+              if (key == 'name' || key == 'gen' || key == 'dept') {
+                  searchBody[key] = new RegExp(searchConditions[key])
+              } else {
+                  searchBody[key] = searchConditions[key]
+              }
           }
       })
       console.log(searchBody)

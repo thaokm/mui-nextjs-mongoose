@@ -1,7 +1,7 @@
 // components/workforce/mpTable/index.js
 import { Card, Table, TableBody, TableCell, 
     TableContainer, TableHead, TableRow,
-    Typography, IconButton
+    Typography, IconButton, CircularProgress, Stack
    } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import InfoIcon from '@mui/icons-material/Info'
@@ -50,7 +50,7 @@ export default function MpTable() {
             })
         }
     },[])
-    if (isLoading) return <p>Đang tải dữ liệu...</p>
+    if (isLoading) return <Stack direction="row" alignItems="center" justifyContent="center"><CircularProgress size="16px"/> Đang tải dữ liệu...</Stack>
     return (
         <Card sx={{margin:"20px", overflow:"auto"}}>
         <TableContainer sx={{maxHeight:"68vh", minWidth:"850px"}}>
