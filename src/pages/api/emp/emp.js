@@ -31,12 +31,12 @@ export default async function emp(req, res) {
       break;
     case 'DELETE':
       console.log({code: 'DELETE to api/emp/emp'})
-      res.send({code: 'something back'})
+      res.json({code: 'something back'})
       break;
     case 'GET':
       console.log({code: 'GET to api/emp/emp'})
       Emp.find().limit(50).exec((err, result) => {
-        res.send(result)
+        res.json(result)
       })
       break;    
   }

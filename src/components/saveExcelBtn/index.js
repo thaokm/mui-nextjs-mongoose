@@ -8,6 +8,7 @@ export default function SaveExcelBtn({filename="report", title="exported data", 
     const [isLoading, setIsLoading] = useState(false)
     const handleClick = () => {
         setIsLoading(true)
+        // console.log(data)
         if (data.length > 0) {
             let header = Object.keys(data[0])
             console.log(header)

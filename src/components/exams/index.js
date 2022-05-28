@@ -39,14 +39,16 @@ export default function Exams({pageName="Examination System", userName, userId})
         getTestbankListAPI().then((data) => {
             console.log(data)
             testList = [...data]
-            initResultData(bank.testData)
-            setTestData([...bank.testData])
+            // initResultData(bank.testData)
+            // setTestData([...bank.testData])
             setIsLoading(false)
         })
     }, [bank.testTitle])
     // lựa chọn bài thi từ ngân hàng thi, render lại trang khi nhận được option
     const comboBoxChange = (option) => {
         setBank(testList[option.id])
+        initResultData(testList[option.id].testData)
+        setTestData([...testList[option.id].testData])
     }
     if (isLoading) return <Stack direction="row" alignItems="center" justifyContent="center"><CircularProgress size="16px"/> Đang tải dữ liệu...</Stack>
     return (

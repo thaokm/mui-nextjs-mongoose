@@ -12,17 +12,17 @@ export default async function testbank(req, res) {
         console.log(newTestbank)
         newTestbank.save((err, result) => {
             if (err) console.error(err)
-            res.send({code: 'success', text: 'đã lưu đề thi mới', data: result})
+            res.json({code: 'success', text: 'đã lưu đề thi mới', data: result})
         })
         break;
     case 'DELETE':
         console.log({code: 'DELETE to api/exam/testbank'})
-        res.send({code: 'something back'})
+        res.json({code: 'something back'})
         break;
     case 'GET':
         console.log({code: 'GET to api/exam/testbank'})
         TestBank.find().exec((err, result) => {
-            res.send(result)
+            res.json(result)
         })
         break;    
   }

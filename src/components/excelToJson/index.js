@@ -1,15 +1,17 @@
 // components/exceltojson/index.js
 import { Grid, Card, Stack, Typography, Box,
-        Table, TableBody, TableCell, 
+        Table, TableBody, TableCell, FormControlLabel,
         TableContainer, TableHead, TableRow,
-        Button, TextField} from "@mui/material"
+        Button, TextField, Switch} from "@mui/material"
 import LoadingButton from '@mui/lab/LoadingButton'
 import { useState } from 'react'
 import CustomAppBar from "../customAppBar"
 import CustomHead from "../customHead"
+import SaveExcelBtn from '../saveExcelBtn'
+
 
 let jsonData //object with key
-const stringToJson = (tabStr) => {
+const stringToJson = (tabStr, OutputType) => {
     var jsonObj = []
     let keys = []
     let rows = tabStr.slice(0, -1).split('\n') //bo ky tu cuoi
@@ -25,7 +27,7 @@ const stringToJson = (tabStr) => {
             })
         }
     })
-    if (rows.length > 2) return jsonObj
+    if (OutputType == true) return jsonObj //chon lay du lieu array
     return jsonObj[0]
 }
 const stringToTableData = (tabStr) => {
@@ -44,13 +46,14 @@ export default function ExcelToJson({pageName="MASTER DATA"}) {
     const [apiRes, setApiRes] = useState('{}')
     const [jsonStr, setJsonStr] = useState('{}')
     const [isLoading, setIsLoading] = useState(false)
+    const [isSwitch, setIsSwitch] = useState(true)
     
     const handleInputChange = (e) => {
         jsonData = stringToJson(e.target.value)
         setInput(e.target.value)
         setTableData(stringToTableData(e.target.value))
         console.log(jsonData)
-        setJsonStr(JSON.stringify(stringToJson(e.target.value)))
+        setJsonStr(JSON.stringify(stringToJson(e.target.value, isSwitch)))
     }
     const handleReset = () => {
         setInput('')
@@ -71,6 +74,10 @@ export default function ExcelToJson({pageName="MASTER DATA"}) {
         setApiRes(JSON.stringify(resData))
         setIsLoading(false)
     }
+    const handleSwitch = (e) => {
+        setJsonStr(JSON.stringify(stringToJson(input, e.target.checked)))
+        setIsSwitch(e.target.checked)
+    }
     return(
         <>
         <CustomHead title={pageName} />
@@ -85,6 +92,7 @@ export default function ExcelToJson({pageName="MASTER DATA"}) {
                 <Stack sx={{mb:"20px"}} spacing={2} direction="row" justifyContent="center">
                     <Button variant="contained" onClick={handleReset}>Reset</Button>
                     <LoadingButton loading={isLoading} variant="contained" onClick={handleCallApi} color="success">Call API</LoadingButton>
+                    <SaveExcelBtn data={JSON.parse(apiRes)}/>
                 </Stack>
                 
                 <Stack sx={{mb:"20px"}} spacing={2} direction="row" justifyContent="center">
@@ -99,7 +107,7 @@ export default function ExcelToJson({pageName="MASTER DATA"}) {
                         onChange={e => setApiMethod(e.target.value)}
                     />
                 </Stack>
-    
+                <FormControlLabel control={<Switch checked={isSwitch} onChange={handleSwitch} />} label="JSON Array" />
                 <Box sx={{overflow:"auto", mb:"20px", maxHeight:"200px", padding:"10px", border:1, borderColor: 'grey.400', borderRadius: 1}}>
                     <Typography>Converted to JSON: <br /> {jsonStr}</Typography>
                 </Box>
